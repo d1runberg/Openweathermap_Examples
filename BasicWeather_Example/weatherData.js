@@ -1,11 +1,12 @@
 var weather = require('openweathermap');
 
-weather.defaults({
-   APPID:"274da36717c724c240cb30390af5386c",
-   units: 'imperial',
-   lang: 'en',
-});
+ var Boulder = {
+     APPID:"274da36717c724c240cb30390af5386c",
+     units: 'imperial',
+     lang: 'en',
+     q:"Boulder"
+}
 
-weather.now({q:"Boulder"},function(err,data){
+weather.now(Boulder,function(err,data){
    console.log(data);
 });
